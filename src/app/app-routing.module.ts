@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './component/home/home.component';
 import {AboutComponent} from './component/about/about.component';
 import {ContactComponent} from './component/contact/contact.component';
+import {PageNotFoundComponent} from './component/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
@@ -35,5 +40,6 @@ export const routingComponents =
   [
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ];
